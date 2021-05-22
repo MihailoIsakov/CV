@@ -1,0 +1,301 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{0em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+% My custom changes 
+%----------------------------------------------------------------------------------------
+
+% Remove page numbers 
+\pagenumbering{gobble}
+
+% Fix margins? 
+\usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Mihailo Isakov}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+%\NewEntry{}{\textit{Born in Serbia,}}{3 October 1992} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:mihailo@tamu.edu}{mihailo@tamu.edu}} % Email address
+
+\NewEntry{website}{\href{https://ascslab.org/members/mihailo/index.html}{https://ascslab.org/members/mihailo/index.html}} % Personal website
+
+\NewEntry{phone}{+1 541 780 3005} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Research Interests}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Intersection of computer architecture, machine learning, high performance computing, and security with a particular emphasis on: hardware and ML algorithm co-design, HPC I/O throughput modelling, secure execution of machine learning models, hardware acceleration of deep neural network (DNN) training, edge-deployed, low power, and low latency DNN training.}\vspace{0em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+%\NewEntry{2016-2022}{Ph.D., Electrical and Computer Engineering}
+\hspace{2em}Ph.D., Electrical and Computer Engineering
+
+\Description{\MarginText{2020--2022}\textbf{Texas A\&M University, College Station, TX}\newline
+Advisor: Prof.~Michel A. Kinsy
+}
+
+%------------------------------------------------
+
+
+%\NewEntry{2016-2022}{Ph.D., Electrical and Computer Engineering}
+\hspace{2em}Ph.D., Electrical and Computer Engineering
+
+\Description{\MarginText{2016--2020}\textbf{Boston University, Boston, MA}\newline
+Advisor: Prof.~Michel A. Kinsy\newline
+Laboratory transferred to Texas A\&M University in September 2020.
+}
+
+%------------------------------------------------
+
+%\NewEntry{2015-2016}{Masters in Software Engineering}
+\hspace{2em}Masters in Software Engineering
+
+\Description{\MarginText{2015--2016}\textbf{University of Novi Sad, Novi Sad, Serbia}\newline
+Transferred in second year to the Boston University's Doctoral Program. \newline\newline}
+\vspace{-2em}
+
+%------------------------------------------------
+
+%\NewEntry{2011-2015}{Bachelor in Electrical Engineering}
+\hspace{2em}Bachelor in Electrical Engineering
+
+\Description{\MarginText{2011--2015}\textit{Software Engineering Specialization} \newline
+\textbf{University of Novi Sad, Novi Sad, Serbia}\newline
+Undergraduate Thesis Title: Inertial Motion Capture System Body Pose Reconstruction using Machine Learning.}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{0.5em}
+
+%------------------------------------------------
+
+%\NewEntry{2015--2016}{Freelance Researcher}
+Freelance Researcher\newline
+\Description{\MarginText{2015--2016}\textbf{Machine learning and data science}\newline
+    Worked as a freelance researcher for several machine learning startups.\newline
+}
+\vspace{-1em}
+
+%------------------------------------------------
+
+%\NewEntry{2015--2016}{Teaching Assistant}
+\hspace{2em}Teaching Assistant
+
+\Description{\MarginText{2015--2016}\textbf{University of Novi Sad, Novi Sad, Serbia}\newline
+    Prepared and taught labs for the (1) artificial intelligence and (2) soft computing classes.\newline
+}
+\vspace{-1em}
+
+%------------------------------------------------
+
+%\NewEntry{Jul--Sep 2014}{Research intern --- Enschede, Netherlands}
+\hspace{2em}Research intern 
+
+\Description{\MarginText{Jul--Sep 2014}\textbf{Xsens Technologies B.V. Enschede, Netherlands}\newline
+    Researched efficient implementations of a human pose reconstruction algorithm from a limited
+number of inertial motion capture sensors worn on the body.\newline
+}
+\vspace{-1em}
+
+%------------------------------------------------
+
+%\NewEntry{2013--2014}{Co-founder / CTO --- Novi Sad, Serbia}
+\hspace{2em}Co-founder / CTO
+
+\Description{\MarginText{2013--2014}\textbf{Citrus Tech Design}\newline
+    Co-founded startup building smart skateboards, longboards and snowboards.\newline
+Product video: \href{https://drive.google.com/file/d/0B-JezYn4rPEyZE1NQzM4TUVvYzQ/view?usp=sharing}{LightBoard}}
+\vspace{-1em}
+
+%------------------------------------------------
+
+
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	CONFERENCE PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\normalsize
+\spacedlowsmallcaps{Conference publications}\vspace{1em}
+
+\footnotesize{
+\begin{enumerate}
+
+
+    \item \textbf{M. Isakov}, E. del Rosario, S. Madireddy, P. Balaprakash, P. Carns, R. B. Ross, M. A. Kinsy, "HPC I/O Throughput Bottleneck Analysis with Explainable Local Models," in 2020 SC20: International Conference for High Performance Computing, Networking, Storage and Analysis (SC), Atlanta, GA, US, 2020 pp. 1-13.
+
+    \item \textbf{M. Isakov}, E. del Rosario, S. Madireddy, P. Balaprakash, P. Carns, R. B. Ross, M. A. Kinsy, "Toward Generalizable Models of I/O Throughput," 2020 IEEE/ACM International Workshop on Runtime and Operating Systems for Supercomputers (ROSS), GA, USA, 2020, pp. 41-49.
+
+    \item E. del Rosario, M. Currier, \textbf{M. Isakov}, S. Madireddy, P. Balaprakash, P. Carns, R. B. Ross, M. A. Kinsy, "Gauge: An Interactive Data-Driven Visualization Tool for HPC Application I/O Performance Analysis," 2020 IEEE/ACM Fifth International Parallel Data Systems Workshop (PDSW), GA, USA, 2020, pp. 15-21.
+
+    \item V. Gadepally, \textbf{M. Isakov}, R. Agrawal, J. Kepner, K. Gettings and M. A. Kinsy, "Homomorphic Encryption Based Secure Sensor Data Processing," 2020 IEEE High Performance Extreme Computing Conference (HPEC), Waltham, MA, USA, 2020, pp. 1-7.
+
+    \item \textbf{M. Isakov}, V. Gadepally, K. M. Gettings and M. A. Kinsy, "Survey of Attacks and Defenses on Edge-Deployed Neural Networks," IEEE High Performance Extreme Computing Conference (\textbf{HPEC}), Waltham, MA, USA, 2019, pp. 1-8. \textbf{Best Student Paper Nominee}.
+
+    \item \textbf{M. Isakov}, L. Bu, H. Cheng, and M. A. Kinsy: “Preventing Neural Network Model Exfiltration in Machine Learning Hardware Accelerators”. In the 2018 Asian Hardware Oriented Security and Trust Symposium (\textbf{AsianHOST}), 2018.
+
+    \item \textbf{M. Isakov} and M. A. Kinsy: “NoSync: Particle Swarm Inspired Distributed DNN Training”. In the 27th International Conference on Artificial Neural Networks (\textbf{ICANN}), 2018.
+
+    \item \textbf{M. Isakov}, A. Ehret and M. Kinsy, "ClosNets: Batchless DNN Training with On-Chip a Priori Sparse Neural Topologies," 28th International Conference on Field Programmable Logic and Applications (\textbf{FPL}), Dublin, 2018, pp. 55-554.
+
+    \item \textbf{M. Isakov}, A. Ehret and M. Kinsy: “Chameleon: A Generalized Reconfigurable Open-Source Architecture for Deep Neural Network Training”. In the 2018 IEEE High Performance Extreme Computing Conference (\textbf{HPEC}), 2018. \textbf{Best student paper nominee}. 
+
+    \item A. Ehret, \textbf{M. Isakov} and M. A. Kinsy: “Towards a Generalized Reconfigurable Agent Based Architecture: Stock Market Simulation Acceleration”, International Conference on Reconfigurable Computing and FPGAs (\textbf{ReConFig}), 2018.
+
+    \item J. R. Doppa, R. G. Kim, \textbf{M. Isakov}, M. A. Kinsy, H. Kwon and T. Krishna: “Adaptive Manycore Architectures for Big Data Computing”. In the International Symposium on Networks-on-Chip (\textbf{NOCS}), October 2017.
+
+    \item H. Hosseinzadeh, \textbf{M. Isakov}, M. Darabi, A. Patooghy, and M. Kinsy: “Janus: An uncertain cache architecture to cope with side channel attacks”. In 2017 IEEE 60th International Midwest Symposium on Circuits and Systems (\textbf{MWSCAS}) Aug 2017. \textbf{The Myril B. Reed Best Paper Award}.
+
+    \item E. Taheri, \textbf{M. Isakov}, A. Patooghy, and M. Kinsy: “Advertiser Elevator: a Fault Tolerant Routing Algorithm for Partially Connected 3D Network-on-Chips”. In 2017 IEEE 60th International Midwest Symposium on Circuits and Systems (\textbf{MWSCAS}) Aug 2017.
+
+    \item M. Kinsy, S. Khadka, \textbf{M. Isakov} and A. Farrukh: “Hermes: Secure Heterogeneous Multicore Architecture Design”. In the IEEE International Symposium on Hardware Oriented Security and Trust (\textbf{HOST}), May 2017.
+
+    \item M. Kinsy, S. Khadka and \textbf{M. Isakov}: “PreNoc: Neural Network based Predictive Routing for Network-on-Chip Architectures”. In the 27th edition of the ACM Great Lakes Symposium on VLSI (\textbf{GLSVLSI}), May 2017.
+
+\end{enumerate}
+}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	JOURNAL PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\normalsize
+\spacedlowsmallcaps{Journal publications}\vspace{1em}
+
+\footnotesize{
+\begin{enumerate}
+    \item E. Taheri, \textbf{M. Isakov}, A. Patooghy, M. A. Kinsy: “Addressing a New Class of Reliability Threats in 3-Dimensional Network-on-Chips”. In the Transactions on Computer-Aided Design of Integrated Circuits and Systems (\textbf{TCAD}), 2019.
+
+    \item M. A. Kinsy, L. Bu, \textbf{M. Isakov} and M. Mark: “Designing Secure Heterogeneous Multicore Systems from Untrusted Components”. \textbf{Cryptography}, vol. 2, iss. 3, no. 12, 2018.
+
+    \item L. Bu, \textbf{M. Isakov} and M. A. Kinsy: “RASSS: A Hijack-resistant Confidential Information Management Scheme for Distributed Systems”. In the Institution of Engineering and Technology (\textbf{IET}), - Computers and Digital Techniques, 2018.
+
+    \item L. Bu, \textbf{M. Isakov}, and M. A. Kinsy: “A Secure and Robust Scheme for Sharing Confidential Information in IoT Systems”. In the Elsevier Journal for Ad Hoc Networks, (\textbf{Ad Hoc Networks}), 2018.
+
+\end{enumerate}
+}
+
+%----------------------------------------------------------------------------------------
+%	WORKSHOP PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\normalsize
+\spacedlowsmallcaps{Workshop publications}\vspace{1em}
+
+\footnotesize{
+\begin{enumerate}
+    \item \textbf{M. Isakov}, "Secure RISC-V Architectures Design Space Exploration Using the BRISC-V Platform", Workshop on Secure RISC-V Architecture Design (SECRISC-V) 2020, Boston, MA.
+
+    \item N. Boskov, \textbf{M. Isakov} and M. A. Kinsy: “CodeTrolley: Hardware-Assisted Control Flow Obfuscation”. Boston Area Architecture 2019 Workshop (BARC19)
+
+    \item \textbf{M. Isakov} and M. A. Kinsy: “NeuroFabric: A Priori Sparsity for Training on the Edge”. In the 2019 tinyML Summit (tinyML), 2019.
+
+    \item R. Agrawal, S. Bandara, A. Ehret, \textbf{M. Isakov}, M. Mark, and M. A. Kinsy: “The BRISC-V Platform: A Practical Teaching Approach for Computer Architecture”, In Workshop on Computer Architecture Education (WCAE), 2019.
+
+    \item \textbf{M. Isakov} and M. A. Kinsy: “ClosNets: a Priori Sparse Topologies for Faster DNN Training”, Boston Area Architecture 2018 Workshop (BARC18), 2018.
+
+    \item M. A. Kinsy, \textbf{M. Isakov}, A. Ehret and D. Kava: “SAPA: Self-Aware Polymorphic Architecture”, Boston Area Architecture 2018 Workshop (BARC18), 2018.
+
+\end{enumerate}
+}
+
+%----------------------------------------------------------------------------------------
+%   REPORTS
+%----------------------------------------------------------------------------------------
+
+\normalsize
+\spacedlowsmallcaps{Reports}\vspace{1em}
+
+\footnotesize{
+\begin{enumerate}
+
+     \item \textbf{M. Isakov}, M. Kinsy. "NeuroFabric: Identifying Ideal Topologies for Training A Priori Sparse Networks", Report v1.0, Dec. 2019.
+     
+    \item N. Boskov, \textbf{M. Isakov}, M. Kinsy. "Drndalo: Lightweight Control Flow Obfuscation Through Minimal Processor/Compiler Co-Design", arXiv preprint arXiv:1912.01560, 2019.
+   
+    \item P. Ren, M. Kinsy, M. Zhu, S. Khadka, \textbf{M. Isakov}, A. Ramrakhyani, T. Krishna, and N. Zheng. “FASHION: Fault-Aware Self-Healing Intelligent On-chip Network”. arXiv:1702.02313, 2017.
+
+\end{enumerate}
+}
+
+%----------------------------------------------------------------------------------------
+%   Outreach activities
+%----------------------------------------------------------------------------------------
+\normalsize
+\spacedlowsmallcaps{Outreach Activities}\vspace{1em}
+
+\footnotesize{
+\begin{enumerate}
+    \item Summer 2019 - Cybersecurity: Introduction to Hardware Security - University of the Virgin Islands Summer Program
+    \item Summer 2017 - Summer Challenge: Electrical Engineering - For high school students as part of the Boston University Summer Program.
+\end{enumerate}
+}
+
+
+\end{cv}
+
+\end{document}
